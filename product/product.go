@@ -31,10 +31,10 @@ func GetProduct(c *fiber.Ctx) {
 func NewProduct(c *fiber.Ctx) {
 	db := database.DBConn
 	var productos Productos
-	productos.Nombre = "Leche"
-	productos.Precio = "30.00"
+	productos.Nombre = "Chocolate"
+	productos.Precio = "50.00"
 	productos.Medida = "Litro"
-	productos.Stock = 20
+	productos.Stock = 10
 	db.Create(&productos)
 	c.JSON(productos)
 }
