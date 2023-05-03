@@ -28,6 +28,8 @@ func GetProduct(c *fiber.Ctx) {
 	db.Find(&productos, "idProductos = ?", id)
 	c.JSON(productos)
 }
+
+// Commit :)
 func NewProduct(c *fiber.Ctx) {
 	db := database.DBConn
 	var productos Productos
